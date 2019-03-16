@@ -26,7 +26,14 @@ public class CustomerController : MonoBehaviour
 	private Transform cachedTransform;
 
 	private GameObject wantedItem = null;
+	private GameObject wantedCashboxLine = null;
+	private GrabController cachedGrabController;
 	private CustomerState currentState = CustomerState.Entered;
+
+	private void Awake()
+	{
+		cachedGrabController = GetComponent<GrabController>();
+	}
 
 	private void ProcessEnteredState()
 	{
@@ -75,13 +82,53 @@ public class CustomerController : MonoBehaviour
 			return;
 		}
 
-		// TODO: grab item
-		currentState = CustomerState.LookingForItem;
+		// Grab new item and release old
+		cachedGrabController.Release();
+		cachedGrabController.Grab(wantedItem.GetComponent<Rigidbody>());
+
+		// Pick desired cashbox line
+		GameObject[] lines = GameObject.FindGameObjectsWithTag("CashboxLine");
+
+		// TODO: pick closest?
+		wantedCashboxLine = lines[UnityEngine.Random.Range(0, lines.Length)];
+
+		currentState = CustomerState.EnRouteToCashboxLine;
 	}
 
 	private void ProcessEnRouteToCashboxLineState()
 	{
-		// TODO: register client in cashbox line
+		// TODO: implement complex line handling logic
+
+		if (!wantedCashboxLine)
+		{
+			currentState = CustomerState.Leaving;
+			return;
+		}
+
+		if (!cachedGrabController.GrabbedBody)
+		{
+			if (wantedItem)
+			{
+				currentState = CustomerState.EnRouteToItem;
+				cachedAgent.SetDestination(wantedItem.transform.position);
+			}
+			else
+				currentState = CustomerState.LookingForItem;
+
+			return;
+		}
+
+		if (cachedAgent.remainingDistance > reachDistance)
+			return;
+
+		float distanceToItemSqr = (wantedCashboxLine.transform.position - cachedTransform.position).sqrMagnitude;
+		if (distanceToItemSqr > reachDistance * reachDistance)
+		{
+			cachedAgent.SetDestination(wantedCashboxLine.transform.position);
+			return;
+		}
+
+		currentState = CustomerState.Buying;
 	}
 
 	private void ProcessInCashboxLineState()
@@ -93,6 +140,8 @@ public class CustomerController : MonoBehaviour
 	{
 		// TODO: play sfx & particle effect
 		// TODO: increase store money
+		currentState = CustomerState.Leaving;
+		Debug.Log("Bought an item!");
 	}
 
 	private void ProcessDisappointingState()
@@ -104,6 +153,8 @@ public class CustomerController : MonoBehaviour
 	private void ProcessLeavingState()
 	{
 		// TODO: go to store exit
+		cachedGrabController.Release();
+		currentState = CustomerState.LookingForItem;
 	}
 
 	private void Update()

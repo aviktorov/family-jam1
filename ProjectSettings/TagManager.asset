@@ -6,6 +6,10 @@ TagManager:
   tags:
   - RackSocket
   - Item
+  - LineSocket
+  - Cashbox
+  - Rack
+  - CashboxLine
   layers:
   - Default
   - TransparentFX

@@ -7,8 +7,8 @@ public class GrabController : MonoBehaviour
 	public Transform grabSocket;
 	public float grabDistance = 1.0f;
 
-	public float breakForce = 100.0f;
-	public float breakTorque = 100.0f;
+	public float breakForce = 5000.0f;
+	public float breakTorque = 5000.0f;
 
 	private FixedJoint grabJoint;
 	private RackSocketController grabRackSocket;
@@ -42,6 +42,9 @@ public class GrabController : MonoBehaviour
 
 	public void Release()
 	{
+		if (!grabJoint)
+			return;
+
 		Rigidbody body = grabJoint.connectedBody;
 		if (!body)
 			return;
