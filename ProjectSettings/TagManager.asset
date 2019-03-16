@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - RackSocket
+  - Item
   layers:
   - Default
   - TransparentFX

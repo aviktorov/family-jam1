@@ -15,6 +15,8 @@ public class GrabController : MonoBehaviour
 	private RackSocketController grabRackSocket;
 	private RackSocketHighlighter grabRackHighlighter;
 
+	public Collider GrabCollider { get; private set; }
+
 	private FixedJoint FetchJoint(Rigidbody body)
 	{
 		if (!body)
@@ -56,19 +58,21 @@ public class GrabController : MonoBehaviour
 		}
 	}
 
-	void Update()
+	void LateUpdate()
 	{
 		Debug.DrawRay(cameraTransform.position, cameraTransform.forward * grabDistance);
+
+		RaycastHit hit;
+		Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, grabDistance);
+
+		GrabCollider = hit.collider;
+
 		if (Input.GetButtonDown("Fire1"))
 		{
 			if (grabJoint)
 				ReleaseJoint();
 			else
-			{
-				RaycastHit hit;
-				if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, grabDistance))
-					FetchJoint(hit.rigidbody);
-			}
+				FetchJoint(hit.rigidbody);
 		}
 	}
 }
