@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GrabController : MonoBehaviour
 {
-	public Transform cameraTransform;
 	public Transform grabSocket;
 	public float grabDistance = 1.0f;
 
@@ -15,9 +14,12 @@ public class GrabController : MonoBehaviour
 	private RackSocketController grabRackSocket;
 	private RackSocketHighlighter grabRackHighlighter;
 
-	public Collider GrabCollider { get; private set; }
+	public Rigidbody GrabbedBody
+	{
+		get { return (grabJoint) ? grabJoint.connectedBody : null; }
+	}
 
-	private FixedJoint FetchJoint(Rigidbody body)
+	public FixedJoint Grab(Rigidbody body)
 	{
 		if (!body)
 			return null;
@@ -26,8 +28,8 @@ public class GrabController : MonoBehaviour
 		{
 			grabJoint = grabSocket.gameObject.AddComponent<FixedJoint>();
 			grabJoint.anchor = grabSocket.localPosition;
-			// grabJoint.breakForce = breakForce;
-			// grabJoint.breakTorque = breakTorque;
+			grabJoint.breakForce = breakForce;
+			grabJoint.breakTorque = breakTorque;
 		}
 
 		body.transform.position = grabSocket.position;
@@ -38,7 +40,7 @@ public class GrabController : MonoBehaviour
 		return grabJoint;
 	}
 
-	private void ReleaseJoint()
+	public void Release()
 	{
 		Rigidbody body = grabJoint.connectedBody;
 		if (!body)
@@ -55,24 +57,6 @@ public class GrabController : MonoBehaviour
 				body.transform.rotation = grabRackSocket.AttachedSocketOrientation;
 			}
 			grabRackSocket.Reset();
-		}
-	}
-
-	void LateUpdate()
-	{
-		Debug.DrawRay(cameraTransform.position, cameraTransform.forward * grabDistance);
-
-		RaycastHit hit;
-		Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, grabDistance);
-
-		GrabCollider = hit.collider;
-
-		if (Input.GetButtonDown("Fire1"))
-		{
-			if (grabJoint)
-				ReleaseJoint();
-			else
-				FetchJoint(hit.rigidbody);
 		}
 	}
 }

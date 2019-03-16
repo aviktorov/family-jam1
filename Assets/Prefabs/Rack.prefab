@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8808793380404787765}
   - component: {fileID: 4206198120033102027}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RackSocket (6)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8808793380404787765
 Transform:
@@ -60,8 +60,8 @@ GameObject:
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8066036989991906215
 Transform:
@@ -145,12 +145,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2426302497213851233}
   - component: {fileID: 6156246282411603330}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RackSocket (11)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2426302497213851233
 Transform:
@@ -193,7 +193,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2187383257303457841
 Transform:
@@ -235,12 +235,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3980485224547977980}
   - component: {fileID: 8809368664732583934}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RackSocket (15)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &3980485224547977980
 Transform:
@@ -279,12 +279,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8544591481493750689}
   - component: {fileID: 6162553522410886749}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RackSocket (2)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8544591481493750689
 Transform:
@@ -323,12 +323,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2630683828247014007}
   - component: {fileID: 3476176822115966084}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RackSocket (12)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2630683828247014007
 Transform:
@@ -367,12 +367,12 @@ GameObject:
   m_Component:
   - component: {fileID: 596131303255093029}
   - component: {fileID: 1036404432335991097}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RackSocket (9)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &596131303255093029
 Transform:
@@ -415,7 +415,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4742720552945700362
 Transform:
@@ -445,12 +445,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7476119749268158901}
   - component: {fileID: 6766272401304624766}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RackSocket (10)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7476119749268158901
 Transform:
@@ -489,12 +489,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6500200993705232093}
   - component: {fileID: 7086517147990096052}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RackSocket (4)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &6500200993705232093
 Transform:
@@ -533,12 +533,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8305609115983241485}
   - component: {fileID: 7640379023959221624}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RackSocket (1)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8305609115983241485
 Transform:
@@ -577,12 +577,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5185966851488865854}
   - component: {fileID: 2502624464215876087}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RackSocket (8)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5185966851488865854
 Transform:
@@ -621,12 +621,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5689287833804452598}
   - component: {fileID: 5689287833804452603}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RackSocket
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5689287833804452598
 Transform:
@@ -665,12 +665,12 @@ GameObject:
   m_Component:
   - component: {fileID: 251207886727881705}
   - component: {fileID: 4887175048743417384}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RackSocket (7)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &251207886727881705
 Transform:
@@ -715,8 +715,8 @@ GameObject:
   m_Name: Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2752713277572424910
 Transform:
@@ -800,12 +800,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2845873887795475566}
   - component: {fileID: 8529349970769536186}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RackSocket (13)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2845873887795475566
 Transform:
@@ -844,12 +844,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2192472582672845937}
   - component: {fileID: 5377962331414187294}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RackSocket (14)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2192472582672845937
 Transform:
@@ -894,8 +894,8 @@ GameObject:
   m_Name: Separator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &422131703184825763
 Transform:
@@ -979,12 +979,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1732997449601002077}
   - component: {fileID: 3317546468216012721}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RackSocket (3)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1732997449601002077
 Transform:
@@ -1023,12 +1023,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4468264221246047630}
   - component: {fileID: 6089021503391038176}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RackSocket (5)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4468264221246047630
 Transform:

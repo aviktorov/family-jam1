@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CursorHighlighter : MonoBehaviour
 {
-	public GrabController grabController = null;
+	public PlayerGrabController grabController = null;
 
 	public Color highlightColor = Color.red;
 	public float smoothness = 20.0f;
