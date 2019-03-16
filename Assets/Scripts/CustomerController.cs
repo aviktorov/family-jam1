@@ -23,51 +23,98 @@ public enum CustomerState
 public class CustomerController : MonoBehaviour
 {
 	public float reachDistance = 2.0f;
-	public bool happy = true;
 
 	private NavMeshAgent cachedAgent;
 	private Transform cachedTransform;
 
 	private GameObject wantedItem = null;
-	private GameObject wantedCashboxLine = null;
-	private GameObject wantedExit = null;
+	private GameObject wantedReachTarget = null;
 
 	private GrabController cachedGrabController;
 	private CustomerState currentState = CustomerState.Entered;
 	private bool boughtItem = false;
+	private bool happy = true;
 
 	private void Awake()
 	{
 		cachedGrabController = GetComponent<GrabController>();
+		cachedTransform = GetComponent<Transform>();
+		cachedAgent = GetComponent<NavMeshAgent>();
+	}
+
+	private void SetRandomReachTarget(string tag)
+	{
+		GameObject[] items = GameObject.FindGameObjectsWithTag(tag);
+
+		if (items == null || items.Length == 0)
+		{
+			wantedReachTarget = null;
+			return;
+		}
+
+		// TODO: pick closest?
+		wantedReachTarget = items[UnityEngine.Random.Range(0, items.Length)];
+
+		cachedAgent.SetDestination(wantedReachTarget.transform.position);
+	}
+
+	private bool HandlePathProgress()
+	{
+		if (cachedAgent.remainingDistance > reachDistance)
+			return true;
+
+		float distanceToItemSqr = (wantedReachTarget.transform.position - cachedTransform.position).sqrMagnitude;
+		if (distanceToItemSqr > reachDistance * reachDistance)
+		{
+			cachedAgent.SetDestination(wantedReachTarget.transform.position);
+			return true;
+		}
+
+		return false;
+	}
+
+	private bool HandleItemLoss()
+	{
+		if (happy && !cachedGrabController.GrabbedBody)
+		{
+			if (wantedItem)
+			{
+				currentState = CustomerState.EnRouteToItem;
+				cachedAgent.SetDestination(wantedItem.transform.position);
+			}
+			else
+				currentState = CustomerState.LookingForItem;
+
+			return true;
+		}
+
+		return false;
 	}
 
 	private void ProcessEnteredState()
 	{
-		currentState = CustomerState.LookingForItem;
+		currentState = CustomerState.LookingForRack;
 	}
 
 	private void ProcessLookingForRackState()
 	{
-		// TODO: get free rack socket for required item
+		SetRandomReachTarget("Rack");
+		currentState = CustomerState.EnRouteToRack;
 	}
 
 	private void ProcessEnRouteToRackState()
 	{
-		// TODO: check if target rack socket was reached
+		if (HandlePathProgress())
+			return;
+
+		currentState = CustomerState.LookingForItem;
 	}
 
 	private void ProcessLookingForItemState()
 	{
-		GameObject[] items = GameObject.FindGameObjectsWithTag("Item");
-
-		// TODO: pick closest?
-		wantedItem = items[UnityEngine.Random.Range(0, items.Length)];
-
-		cachedTransform = GetComponent<Transform>();
-		cachedAgent = GetComponent<NavMeshAgent>();
-		cachedAgent.SetDestination(wantedItem.transform.position);
-
-		currentState = CustomerState.EnRouteToItem;
+		SetRandomReachTarget("Item");
+		wantedItem = wantedReachTarget;
+		currentState = (wantedReachTarget) ? CustomerState.EnRouteToItem : CustomerState.Disappointing;
 	}
 
 	private void ProcessEnRouteToItemState()
@@ -78,15 +125,8 @@ public class CustomerController : MonoBehaviour
 			return;
 		}
 
-		if (cachedAgent.remainingDistance > reachDistance)
+		if (HandlePathProgress())
 			return;
-
-		float distanceToItemSqr = (wantedItem.transform.position - cachedTransform.position).sqrMagnitude;
-		if (distanceToItemSqr > reachDistance * reachDistance)
-		{
-			cachedAgent.SetDestination(wantedItem.transform.position);
-			return;
-		}
 
 		// Grab new item and release old
 		cachedGrabController.Release();
@@ -97,47 +137,18 @@ public class CustomerController : MonoBehaviour
 
 	private void ProcessLookingForCashboxLineState()
 	{
-		// Pick desired cashbox line
-		GameObject[] lines = GameObject.FindGameObjectsWithTag("CashboxLine");
-
-		// TODO: pick closest?
-		wantedCashboxLine = lines[UnityEngine.Random.Range(0, lines.Length)];
-
+		SetRandomReachTarget("CashboxLine");
 		currentState = CustomerState.EnRouteToCashboxLine;
 	}
 
 	private void ProcessEnRouteToCashboxLineState()
 	{
 		// TODO: implement complex line handling logic
-
-		if (!wantedCashboxLine)
-		{
-			currentState = CustomerState.Leaving;
-			return;
-		}
-
-		if (!cachedGrabController.GrabbedBody)
-		{
-			if (wantedItem)
-			{
-				currentState = CustomerState.EnRouteToItem;
-				cachedAgent.SetDestination(wantedItem.transform.position);
-			}
-			else
-				currentState = CustomerState.LookingForItem;
-
-			return;
-		}
-
-		if (cachedAgent.remainingDistance > reachDistance)
+		if (HandleItemLoss())
 			return;
 
-		float distanceToItemSqr = (wantedCashboxLine.transform.position - cachedTransform.position).sqrMagnitude;
-		if (distanceToItemSqr > reachDistance * reachDistance)
-		{
-			cachedAgent.SetDestination(wantedCashboxLine.transform.position);
+		if (HandlePathProgress())
 			return;
-		}
 
 		currentState = CustomerState.Buying;
 	}
@@ -149,44 +160,17 @@ public class CustomerController : MonoBehaviour
 
 	private void ProcessLookingForExitState()
 	{
-		GameObject[] exits = GameObject.FindGameObjectsWithTag("Exit");
-
-		// TODO: pick closest?
-		wantedExit = exits[UnityEngine.Random.Range(0, exits.Length)];
-
+		SetRandomReachTarget("Exit");
 		currentState = CustomerState.EnRouteToExit;
 	}
 
 	private void ProcessEnRouteToExitState()
 	{
-		if (!wantedExit)
-		{
-			currentState = CustomerState.LookingForExit;
-			return;
-		}
-
-		if (happy && !cachedGrabController.GrabbedBody)
-		{
-			if (wantedItem)
-			{
-				currentState = CustomerState.EnRouteToItem;
-				cachedAgent.SetDestination(wantedItem.transform.position);
-			}
-			else
-				currentState = CustomerState.LookingForItem;
-
-			return;
-		}
-
-		if (cachedAgent.remainingDistance > reachDistance)
+		if (HandleItemLoss())
 			return;
 
-		float distanceToItemSqr = (wantedExit.transform.position - cachedTransform.position).sqrMagnitude;
-		if (distanceToItemSqr > reachDistance * reachDistance)
-		{
-			cachedAgent.SetDestination(wantedExit.transform.position);
+		if (HandlePathProgress())
 			return;
-		}
 
 		currentState = CustomerState.Leaving;
 	}
@@ -204,15 +188,18 @@ public class CustomerController : MonoBehaviour
 	private void ProcessDisappointingState()
 	{
 		// TODO: play sfx & particle effect
-
 		currentState = CustomerState.LookingForExit;
 		happy = false;
+		wantedItem = null;
+		cachedGrabController.Release();
 	}
 
 	private void ProcessLeavingState()
 	{
 		// TODO: play sfx & particle effect
-		GameObject.Destroy(cachedGrabController.GrabbedBody.gameObject);
+		if (cachedGrabController.GrabbedBody)
+			GameObject.Destroy(cachedGrabController.GrabbedBody.gameObject);
+
 		GameObject.Destroy(gameObject);
 	}
 
