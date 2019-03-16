@@ -11,7 +11,6 @@ public class GrabController : MonoBehaviour
 	public float breakTorque = 5000.0f;
 
 	private FixedJoint grabJoint;
-	private RackSocketController grabRackSocket;
 	private RackSocketHighlighter grabRackHighlighter;
 
 	public Rigidbody GrabbedBody
@@ -34,13 +33,12 @@ public class GrabController : MonoBehaviour
 
 		body.transform.position = grabSocket.position;
 
-		grabRackSocket = body.gameObject.GetComponent<RackSocketController>();
 		grabJoint.connectedBody = body;
 
 		return grabJoint;
 	}
 
-	public void Release()
+	public void Release(Transform socketTransform = null)
 	{
 		if (!grabJoint)
 			return;
@@ -52,14 +50,10 @@ public class GrabController : MonoBehaviour
 		GameObject.Destroy(grabJoint);
 		grabJoint = null;
 
-		if (grabRackSocket)
+		if (socketTransform)
 		{
-			if (grabRackSocket.Attached)
-			{
-				body.transform.position = grabRackSocket.AttachedSocketPosition;
-				body.transform.rotation = grabRackSocket.AttachedSocketOrientation;
-			}
-			grabRackSocket.Reset();
+			body.transform.position = socketTransform.position;
+			body.transform.rotation = socketTransform.rotation;
 		}
 	}
 }

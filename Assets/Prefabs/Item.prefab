@@ -13,9 +13,7 @@ GameObject:
   - component: {fileID: 2754896644238613409}
   - component: {fileID: 2754896644238613436}
   - component: {fileID: 2754896644238613408}
-  - component: {fileID: 2754896644238613434}
-  - component: {fileID: 2754896644238613437}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Item
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -110,28 +108,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2754896644238613434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2754896644238613411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff5cc047491fd9145bf305f37b5ea2b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2754896644238613437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2754896644238613411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 847a8c348a58bcc4b9cce0c7c9e73c99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlightMaterial: {fileID: 2100000, guid: 56b9f79f06afbb544b63a6f6badec22c, type: 2}

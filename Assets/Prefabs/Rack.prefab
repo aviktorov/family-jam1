@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8808793380404787765}
   - component: {fileID: 4206198120033102027}
-  m_Layer: 2
+  - component: {fileID: 252813641448276607}
+  m_Layer: 10
   m_Name: RackSocket (6)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83598743098173878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6199999, y: 1, z: -2.58}
+  m_LocalPosition: {x: 0.6199999, y: 1.5, z: -2.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2187383257303457841}
@@ -43,7 +44,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1, z: 0.6}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &252813641448276607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83598743098173878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa773e458baac419dff582da18d7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2754896644238613411, guid: e40e8fb7aeeff124e91b2049e2ca91ae,
+    type: 3}
 --- !u!1 &787125061466215692
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +160,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2426302497213851233}
   - component: {fileID: 6156246282411603330}
-  m_Layer: 2
+  - component: {fileID: 2771457188379454700}
+  m_Layer: 10
   m_Name: RackSocket (11)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
@@ -160,7 +176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795933384787528982}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.61, y: 1, z: 0.56}
+  m_LocalPosition: {x: -0.61, y: 1.5, z: 0.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2187383257303457841}
@@ -178,7 +194,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1, z: 0.6}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2771457188379454700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795933384787528982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa773e458baac419dff582da18d7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2754896644238613411, guid: e40e8fb7aeeff124e91b2049e2ca91ae,
+    type: 3}
 --- !u!1 &1530643925488051458
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +265,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3980485224547977980}
   - component: {fileID: 8809368664732583934}
-  m_Layer: 2
+  - component: {fileID: 8179063536441193964}
+  m_Layer: 10
   m_Name: RackSocket (15)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
@@ -250,7 +281,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788197102839819335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.61000013, y: 1, z: -3.56}
+  m_LocalPosition: {x: -0.61000013, y: 1.5, z: -3.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2187383257303457841}
@@ -268,7 +299,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1, z: 0.6}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8179063536441193964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788197102839819335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa773e458baac419dff582da18d7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2754896644238613411, guid: e40e8fb7aeeff124e91b2049e2ca91ae,
+    type: 3}
 --- !u!1 &2023104269994369789
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +324,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8544591481493750689}
   - component: {fileID: 6162553522410886749}
-  m_Layer: 2
+  - component: {fileID: 3675029766848640007}
+  m_Layer: 10
   m_Name: RackSocket (2)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
@@ -294,7 +340,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023104269994369789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6199999, y: 1, z: 1.58}
+  m_LocalPosition: {x: 0.6199999, y: 1.5, z: 1.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2187383257303457841}
@@ -312,7 +358,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1, z: 0.6}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3675029766848640007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023104269994369789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa773e458baac419dff582da18d7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2754896644238613411, guid: e40e8fb7aeeff124e91b2049e2ca91ae,
+    type: 3}
 --- !u!1 &2626229073391125832
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +383,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2630683828247014007}
   - component: {fileID: 3476176822115966084}
-  m_Layer: 2
+  - component: {fileID: 7905718060997736622}
+  m_Layer: 10
   m_Name: RackSocket (12)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
@@ -338,7 +399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2626229073391125832}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.61000013, y: 1, z: -0.47}
+  m_LocalPosition: {x: -0.61000013, y: 1.5, z: -0.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2187383257303457841}
@@ -356,7 +417,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1, z: 0.6}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7905718060997736622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2626229073391125832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa773e458baac419dff582da18d7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2754896644238613411, guid: e40e8fb7aeeff124e91b2049e2ca91ae,
+    type: 3}
 --- !u!1 &4032360896370639139
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +442,8 @@ GameObject:
   m_Component:
   - component: {fileID: 596131303255093029}
   - component: {fileID: 1036404432335991097}
-  m_Layer: 2
+  - component: {fileID: 2249844592726806786}
+  m_Layer: 10
   m_Name: RackSocket (9)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
@@ -382,7 +458,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4032360896370639139}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.61000013, y: 1, z: 2.56}
+  m_LocalPosition: {x: -0.61000013, y: 1.5, z: 2.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2187383257303457841}
@@ -400,7 +476,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1, z: 0.6}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2249844592726806786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4032360896370639139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa773e458baac419dff582da18d7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2754896644238613411, guid: e40e8fb7aeeff124e91b2049e2ca91ae,
+    type: 3}
 --- !u!1 &4698774380037870960
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,7 +535,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7476119749268158901}
   - component: {fileID: 6766272401304624766}
-  m_Layer: 2
+  - component: {fileID: 2389563477178287838}
+  m_Layer: 10
   m_Name: RackSocket (10)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
@@ -460,7 +551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5032298313867475093}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.61000013, y: 1, z: 1.58}
+  m_LocalPosition: {x: -0.61000013, y: 1.5, z: 1.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2187383257303457841}
@@ -478,7 +569,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1, z: 0.6}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2389563477178287838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5032298313867475093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa773e458baac419dff582da18d7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2754896644238613411, guid: e40e8fb7aeeff124e91b2049e2ca91ae,
+    type: 3}
 --- !u!1 &5250205518333751618
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +594,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6500200993705232093}
   - component: {fileID: 7086517147990096052}
-  m_Layer: 2
+  - component: {fileID: 5863782460962098931}
+  m_Layer: 10
   m_Name: RackSocket (4)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
@@ -504,7 +610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5250205518333751618}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6199999, y: 1, z: -0.47}
+  m_LocalPosition: {x: 0.6199999, y: 1.5, z: -0.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2187383257303457841}
@@ -522,7 +628,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1, z: 0.6}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5863782460962098931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5250205518333751618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa773e458baac419dff582da18d7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2754896644238613411, guid: e40e8fb7aeeff124e91b2049e2ca91ae,
+    type: 3}
 --- !u!1 &5617871087232940148
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +653,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8305609115983241485}
   - component: {fileID: 7640379023959221624}
-  m_Layer: 2
+  - component: {fileID: 6239326799705568395}
+  m_Layer: 10
   m_Name: RackSocket (1)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
@@ -548,7 +669,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5617871087232940148}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6199999, y: 1, z: 2.56}
+  m_LocalPosition: {x: 0.6199999, y: 1.5, z: 2.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2187383257303457841}
@@ -566,7 +687,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1, z: 0.6}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6239326799705568395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5617871087232940148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa773e458baac419dff582da18d7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2754896644238613411, guid: e40e8fb7aeeff124e91b2049e2ca91ae,
+    type: 3}
 --- !u!1 &5684264155685745808
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +712,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5185966851488865854}
   - component: {fileID: 2502624464215876087}
-  m_Layer: 2
+  - component: {fileID: 1658028270404673864}
+  m_Layer: 10
   m_Name: RackSocket (8)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
@@ -592,7 +728,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5684264155685745808}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.61000013, y: 1, z: 3.57}
+  m_LocalPosition: {x: -0.61000013, y: 1.5, z: 3.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2187383257303457841}
@@ -610,7 +746,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1, z: 0.6}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1658028270404673864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5684264155685745808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa773e458baac419dff582da18d7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2754896644238613411, guid: e40e8fb7aeeff124e91b2049e2ca91ae,
+    type: 3}
 --- !u!1 &5689287833804452602
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,7 +771,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5689287833804452598}
   - component: {fileID: 5689287833804452603}
-  m_Layer: 2
+  - component: {fileID: 5739930555465577864}
+  m_Layer: 10
   m_Name: RackSocket
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
@@ -636,7 +787,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5689287833804452602}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6199999, y: 1, z: 3.57}
+  m_LocalPosition: {x: 0.6199999, y: 1.5, z: 3.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2187383257303457841}
@@ -654,7 +805,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1, z: 0.6}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5739930555465577864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5689287833804452602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa773e458baac419dff582da18d7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2754896644238613411, guid: e40e8fb7aeeff124e91b2049e2ca91ae,
+    type: 3}
 --- !u!1 &6191636689806768846
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,7 +830,8 @@ GameObject:
   m_Component:
   - component: {fileID: 251207886727881705}
   - component: {fileID: 4887175048743417384}
-  m_Layer: 2
+  - component: {fileID: 2138344720050943109}
+  m_Layer: 10
   m_Name: RackSocket (7)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
@@ -680,7 +846,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6191636689806768846}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6199999, y: 1, z: -3.56}
+  m_LocalPosition: {x: 0.6199999, y: 1.5, z: -3.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2187383257303457841}
@@ -698,7 +864,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1, z: 0.6}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2138344720050943109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191636689806768846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa773e458baac419dff582da18d7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2754896644238613411, guid: e40e8fb7aeeff124e91b2049e2ca91ae,
+    type: 3}
 --- !u!1 &6343371855953612950
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,7 +980,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2845873887795475566}
   - component: {fileID: 8529349970769536186}
-  m_Layer: 2
+  - component: {fileID: 2829435064990878779}
+  m_Layer: 10
   m_Name: RackSocket (13)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
@@ -815,7 +996,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7158719545320844956}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.61000013, y: 1, z: -1.52}
+  m_LocalPosition: {x: -0.61000013, y: 1.5, z: -1.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2187383257303457841}
@@ -833,7 +1014,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1, z: 0.6}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2829435064990878779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158719545320844956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa773e458baac419dff582da18d7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2754896644238613411, guid: e40e8fb7aeeff124e91b2049e2ca91ae,
+    type: 3}
 --- !u!1 &7559581077816434023
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +1039,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2192472582672845937}
   - component: {fileID: 5377962331414187294}
-  m_Layer: 2
+  - component: {fileID: 51849332535738752}
+  m_Layer: 10
   m_Name: RackSocket (14)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
@@ -859,7 +1055,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7559581077816434023}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.61000013, y: 1, z: -2.58}
+  m_LocalPosition: {x: -0.61000013, y: 1.5, z: -2.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2187383257303457841}
@@ -877,7 +1073,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1, z: 0.6}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &51849332535738752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7559581077816434023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa773e458baac419dff582da18d7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2754896644238613411, guid: e40e8fb7aeeff124e91b2049e2ca91ae,
+    type: 3}
 --- !u!1 &7577753168985880731
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,7 +1189,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1732997449601002077}
   - component: {fileID: 3317546468216012721}
-  m_Layer: 2
+  - component: {fileID: 7880996470570184580}
+  m_Layer: 10
   m_Name: RackSocket (3)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
@@ -994,7 +1205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7976950425179713982}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6199999, y: 1, z: 0.56}
+  m_LocalPosition: {x: 0.6199999, y: 1.5, z: 0.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2187383257303457841}
@@ -1012,7 +1223,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1, z: 0.6}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7880996470570184580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7976950425179713982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa773e458baac419dff582da18d7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2754896644238613411, guid: e40e8fb7aeeff124e91b2049e2ca91ae,
+    type: 3}
 --- !u!1 &8386325094390361745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,7 +1248,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4468264221246047630}
   - component: {fileID: 6089021503391038176}
-  m_Layer: 2
+  - component: {fileID: 4282726357081327944}
+  m_Layer: 10
   m_Name: RackSocket (5)
   m_TagString: RackSocket
   m_Icon: {fileID: 0}
@@ -1038,7 +1264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8386325094390361745}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6199999, y: 1, z: -1.52}
+  m_LocalPosition: {x: 0.6199999, y: 1.5, z: -1.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2187383257303457841}
@@ -1056,4 +1282,18 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1, z: 0.6}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4282726357081327944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8386325094390361745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa773e458baac419dff582da18d7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 2754896644238613411, guid: e40e8fb7aeeff124e91b2049e2ca91ae,
+    type: 3}
