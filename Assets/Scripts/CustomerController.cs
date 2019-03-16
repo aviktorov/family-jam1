@@ -112,8 +112,20 @@ public class CustomerController : MonoBehaviour
 
 	private void ProcessLookingForItemState()
 	{
-		SetRandomReachTarget("Item");
-		wantedItem = wantedReachTarget;
+		wantedReachTarget = null;
+
+		HashSet<GameObject> items = ShopItemRegistry.instance.items;
+		if (items != null && items.Count != 0)
+		{
+			// TODO: remove later
+			GameObject[] itemsArray = new GameObject[items.Count];
+			items.CopyTo(itemsArray);
+
+			wantedReachTarget = itemsArray[UnityEngine.Random.Range(0, items.Count)];
+			wantedItem = wantedReachTarget;
+			cachedAgent.SetDestination(wantedReachTarget.transform.position);
+		}
+		
 		currentState = (wantedReachTarget) ? CustomerState.EnRouteToItem : CustomerState.Disappointing;
 	}
 
