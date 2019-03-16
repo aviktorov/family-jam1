@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4206198120033102027}
   m_Layer: 0
   m_Name: RackSocket (6)
-  m_TagString: Untagged
+  m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 6156246282411603330}
   m_Layer: 0
   m_Name: RackSocket (11)
-  m_TagString: Untagged
+  m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 8809368664732583934}
   m_Layer: 0
   m_Name: RackSocket (15)
-  m_TagString: Untagged
+  m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 6162553522410886749}
   m_Layer: 0
   m_Name: RackSocket (2)
-  m_TagString: Untagged
+  m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 3476176822115966084}
   m_Layer: 0
   m_Name: RackSocket (12)
-  m_TagString: Untagged
+  m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 1036404432335991097}
   m_Layer: 0
   m_Name: RackSocket (9)
-  m_TagString: Untagged
+  m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 6766272401304624766}
   m_Layer: 0
   m_Name: RackSocket (10)
-  m_TagString: Untagged
+  m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 7086517147990096052}
   m_Layer: 0
   m_Name: RackSocket (4)
-  m_TagString: Untagged
+  m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 7640379023959221624}
   m_Layer: 0
   m_Name: RackSocket (1)
-  m_TagString: Untagged
+  m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 2502624464215876087}
   m_Layer: 0
   m_Name: RackSocket (8)
-  m_TagString: Untagged
+  m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -623,7 +623,7 @@ GameObject:
   - component: {fileID: 5689287833804452603}
   m_Layer: 0
   m_Name: RackSocket
-  m_TagString: Untagged
+  m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 4887175048743417384}
   m_Layer: 0
   m_Name: RackSocket (7)
-  m_TagString: Untagged
+  m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -802,7 +802,7 @@ GameObject:
   - component: {fileID: 8529349970769536186}
   m_Layer: 0
   m_Name: RackSocket (13)
-  m_TagString: Untagged
+  m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -846,7 +846,7 @@ GameObject:
   - component: {fileID: 5377962331414187294}
   m_Layer: 0
   m_Name: RackSocket (14)
-  m_TagString: Untagged
+  m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -981,7 +981,7 @@ GameObject:
   - component: {fileID: 3317546468216012721}
   m_Layer: 0
   m_Name: RackSocket (3)
-  m_TagString: Untagged
+  m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1025,7 +1025,7 @@ GameObject:
   - component: {fileID: 6089021503391038176}
   m_Layer: 0
   m_Name: RackSocket (5)
-  m_TagString: Untagged
+  m_TagString: RackSocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
