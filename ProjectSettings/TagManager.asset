@@ -10,6 +10,7 @@ TagManager:
   - Cashbox
   - Rack
   - CashboxLine
+  - Exit
   layers:
   - Default
   - TransparentFX
