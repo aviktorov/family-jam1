@@ -58,6 +58,22 @@ public class CustomerController : MonoBehaviour
 		cachedAgent.SetDestination(wantedReachTarget.transform.position);
 	}
 
+	private void SetRandomRegistryTarget(HashSet<GameObject> targets)
+	{
+		if (targets == null || targets.Count == 0)
+		{
+			wantedReachTarget = null;
+			return;
+		}
+
+		// TODO: remove later
+		GameObject[] targetsArray = new GameObject[targets.Count];
+		targets.CopyTo(targetsArray);
+
+		wantedReachTarget = targetsArray[UnityEngine.Random.Range(0, targetsArray.Length)];
+		cachedAgent.SetDestination(wantedReachTarget.transform.position);
+	}
+
 	private bool HandlePathProgress()
 	{
 		if (cachedAgent.remainingDistance > reachDistance)
@@ -98,7 +114,7 @@ public class CustomerController : MonoBehaviour
 
 	private void ProcessLookingForRackState()
 	{
-		SetRandomReachTarget("Rack");
+		SetRandomRegistryTarget(ShopRegistry.instance.racks);
 		currentState = CustomerState.EnRouteToRack;
 	}
 
@@ -112,20 +128,9 @@ public class CustomerController : MonoBehaviour
 
 	private void ProcessLookingForItemState()
 	{
-		wantedReachTarget = null;
+		SetRandomRegistryTarget(ShopRegistry.instance.items);
+		wantedItem = wantedReachTarget;
 
-		HashSet<GameObject> items = ShopItemRegistry.instance.items;
-		if (items != null && items.Count != 0)
-		{
-			// TODO: remove later
-			GameObject[] itemsArray = new GameObject[items.Count];
-			items.CopyTo(itemsArray);
-
-			wantedReachTarget = itemsArray[UnityEngine.Random.Range(0, items.Count)];
-			wantedItem = wantedReachTarget;
-			cachedAgent.SetDestination(wantedReachTarget.transform.position);
-		}
-		
 		currentState = (wantedReachTarget) ? CustomerState.EnRouteToItem : CustomerState.Disappointing;
 	}
 

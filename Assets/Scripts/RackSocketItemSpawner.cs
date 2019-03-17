@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class RackSocketItemSpawner : MonoBehaviour
 {
-	public GameObject itemPrefab = null;
+	public GameObject[] itemPrefabs = null;
 
-	private void Start()
+	private void Awake()
 	{
-		GameObject.Instantiate(itemPrefab, transform.position, transform.rotation);
+		if (itemPrefabs != null && itemPrefabs.Length > 0)
+		{
+			GameObject prefab = itemPrefabs[UnityEngine.Random.Range(0, itemPrefabs.Length)];
+			if (prefab)
+				GameObject.Instantiate(prefab, transform.position, transform.rotation);
+		}
 		GameObject.Destroy(this);
 	}
 }
