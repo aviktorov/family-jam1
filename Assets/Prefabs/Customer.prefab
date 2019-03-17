@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1291223232}
   - component: {fileID: 1291223233}
   - component: {fileID: 8628538761499559245}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ThoughtIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 7170351818227366475}
   - component: {fileID: 7170351818227366473}
   - component: {fileID: 7170351818227366472}
-  m_Layer: 2
+  m_Layer: 11
   m_Name: LHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 7170351818336205231}
   - component: {fileID: 7170351818336205229}
   - component: {fileID: 7170351818336205228}
-  m_Layer: 2
+  m_Layer: 11
   m_Name: RHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 7170351818912060338}
   - component: {fileID: 7170351818912060339}
   - component: {fileID: 8004240191130798527}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Customer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7170351819930534492}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -477,7 +477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7170351820081411922}
   - component: {fileID: 7170351820081411923}
-  m_Layer: 2
+  m_Layer: 11
   m_Name: GrabSocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}

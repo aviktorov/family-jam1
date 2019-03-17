@@ -38,11 +38,11 @@ public class ShopRegistry : MonoSingleton<ShopRegistry>
 
 	private void OnTriggerEnter(Collider collider)
 	{
-		TryAdd(collider);
+		StartCoroutine("TryAdd", collider);
 	}
 
 	private void OnTriggerExit(Collider collider)
 	{
-		TryRemove(collider);
+		StartCoroutine("TryRemove", collider);
 	}
 }
