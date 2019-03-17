@@ -403,6 +403,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoreCrateBottle
       objectReference: {fileID: 0}
+    - target: {fileID: 5158627650946026457, guid: 3a480e3f3f6320e46b4c4da2629a760b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5158627650946026402, guid: 3a480e3f3f6320e46b4c4da2629a760b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -457,6 +462,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158627649896120275, guid: 3a480e3f3f6320e46b4c4da2629a760b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158627650490693783, guid: 3a480e3f3f6320e46b4c4da2629a760b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a480e3f3f6320e46b4c4da2629a760b, type: 3}
@@ -2241,6 +2256,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoreCrateBoxV
       objectReference: {fileID: 0}
+    - target: {fileID: 5158627650946026457, guid: 3a480e3f3f6320e46b4c4da2629a760b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5158627650946026402, guid: 3a480e3f3f6320e46b4c4da2629a760b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2295,6 +2315,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158627649896120275, guid: 3a480e3f3f6320e46b4c4da2629a760b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158627650490693783, guid: 3a480e3f3f6320e46b4c4da2629a760b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5158627650946026462, guid: 3a480e3f3f6320e46b4c4da2629a760b,
         type: 3}
@@ -2472,6 +2502,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoreCrateTin
       objectReference: {fileID: 0}
+    - target: {fileID: 5158627650946026457, guid: 3a480e3f3f6320e46b4c4da2629a760b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5158627650946026402, guid: 3a480e3f3f6320e46b4c4da2629a760b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2526,6 +2561,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158627649896120275, guid: 3a480e3f3f6320e46b4c4da2629a760b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158627650490693783, guid: 3a480e3f3f6320e46b4c4da2629a760b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5158627650946026462, guid: 3a480e3f3f6320e46b4c4da2629a760b,
         type: 3}
@@ -4046,6 +4091,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoreCrateBoxH
       objectReference: {fileID: 0}
+    - target: {fileID: 5158627650946026457, guid: 3a480e3f3f6320e46b4c4da2629a760b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5158627650946026402, guid: 3a480e3f3f6320e46b4c4da2629a760b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4100,6 +4150,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158627649896120275, guid: 3a480e3f3f6320e46b4c4da2629a760b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158627650490693783, guid: 3a480e3f3f6320e46b4c4da2629a760b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5158627650946026462, guid: 3a480e3f3f6320e46b4c4da2629a760b,
         type: 3}
