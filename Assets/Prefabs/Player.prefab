@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 360
-  movementSpeed: 10
+  movementSpeed: 5
 --- !u!143 &8703531819276448540
 CharacterController:
   m_ObjectHideFlags: 0
@@ -340,7 +340,6 @@ GameObject:
   - component: {fileID: 8703531819924029154}
   - component: {fileID: 8703531819924029181}
   - component: {fileID: 274445745}
-  - component: {fileID: 274445746}
   m_Layer: 11
   m_Name: Camera
   m_TagString: MainCamera
@@ -415,23 +414,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8703531819924029155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 1119e9700617a3f44a9ec2f9168449cd, type: 2}
-  isGlobal: 1
-  blendDistance: 0
-  weight: 1
-  priority: 0
---- !u!114 &274445746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8703531819924029155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -441,7 +423,7 @@ MonoBehaviour:
     m_Bits: 1
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 1
-  antialiasingMode: 1
+  antialiasingMode: 3
   temporalAntialiasing:
     jitterSpread: 0.75
     sharpness: 0.25

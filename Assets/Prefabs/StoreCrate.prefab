@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &5158627649896120272
 Transform:
@@ -44,7 +44,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &5158627650490693780
 Transform:
@@ -79,7 +79,7 @@ GameObject:
   m_TagString: StoreCrate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &5158627650946026402
 Transform:
@@ -88,7 +88,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5158627650946026457}
-  m_LocalRotation: {x: -0, y: 0.11401252, z: -0, w: 0.9934793}
+  m_LocalRotation: {x: 0, y: 0.11400953, z: 0, w: 0.99347967}
   m_LocalPosition: {x: -9.478083, y: 0.51, z: -6.5547495}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -130,7 +130,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
+  m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10c8e73ce28b6a44baa15967befd1195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 1837723263853187502, guid: 853723d76fafa994fb1559432756f1a2,
+  itemPrefab: {fileID: 2101682599365512204, guid: 902395a51012c274c93f6b9295c6dcb3,
     type: 3}
   spawnSocket: {fileID: 5158627650490693780}
   infoSocket: {fileID: 5158627649896120272}
