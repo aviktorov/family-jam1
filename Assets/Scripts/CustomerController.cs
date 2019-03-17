@@ -200,16 +200,18 @@ public class CustomerController : MonoBehaviour
 	private void ProcessBuyingState()
 	{
 		// TODO: play sfx & particle effect
-		// TODO: increase store money
-		Debug.Log("Bought an item!");
-		boughtItem = true;
 
+		ItemValue item = wantedItem.GetComponent<ItemValue>();
+		ShopRegistry.instance.grossRevenue += item.value;
+
+		boughtItem = true;
 		currentState = CustomerState.LookingForExit;
 	}
 
 	private void ProcessDisappointingState()
 	{
 		// TODO: play sfx & particle effect
+
 		currentState = CustomerState.LookingForExit;
 		happy = false;
 		wantedItem = null;
@@ -218,6 +220,11 @@ public class CustomerController : MonoBehaviour
 
 	private void ProcessLeavingState()
 	{
+		if (happy)
+			ShopRegistry.instance.happyCustomers++;
+		else
+			ShopRegistry.instance.disappointedCustomers++;
+
 		// TODO: play sfx & particle effect
 		if (cachedGrabController.GrabbedBody)
 			GameObject.Destroy(cachedGrabController.GrabbedBody.gameObject);

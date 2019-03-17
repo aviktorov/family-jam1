@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class ShopRegistry : MonoSingleton<ShopRegistry>
 {
+	public int grossRevenue = 0;
+	public int happyCustomers = 0;
+	public int disappointedCustomers = 0;
+	public float timeLeft = 601; // 10 minutes
+
 	public HashSet<GameObject> items = new HashSet<GameObject>();
 	public HashSet<GameObject> racks = new HashSet<GameObject>();
 
@@ -34,6 +39,11 @@ public class ShopRegistry : MonoSingleton<ShopRegistry>
 		{
 			TryAdd(possibleObjects[i]);
 		}
+	}
+
+	private void Update()
+	{
+		timeLeft = Mathf.Max(0.0f, timeLeft - Time.deltaTime);
 	}
 
 	private void OnTriggerEnter(Collider collider)
