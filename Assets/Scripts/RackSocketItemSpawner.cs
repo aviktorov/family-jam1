@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class RackSocketItemSpawner : MonoBehaviour
 {
+	public float probability = 0.25f;
 	public GameObject[] itemPrefabs = null;
 
 	private void Awake()
 	{
-		if (itemPrefabs != null && itemPrefabs.Length > 0)
+		bool shouldSpawn = (UnityEngine.Random.Range(0.0f, 1.0f) < probability);
+		if (shouldSpawn && itemPrefabs != null && itemPrefabs.Length > 0)
 		{
 			GameObject prefab = itemPrefabs[UnityEngine.Random.Range(0, itemPrefabs.Length)];
 			if (prefab)

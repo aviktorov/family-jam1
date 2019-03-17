@@ -103,7 +103,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430354753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 1.211, z: 0}
+  m_LocalPosition: {x: -0, y: 1.37, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 164748427}
@@ -215,9 +215,11 @@ GameObject:
   - component: {fileID: 8703531819276448540}
   - component: {fileID: 720566354}
   - component: {fileID: 720566350}
+  - component: {fileID: 8703750356625852055}
+  - component: {fileID: 720566351}
   m_Layer: 0
   m_Name: Player
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,8 +264,8 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1.7
+  m_Radius: 0.4
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -297,11 +299,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77a8d8d1f344114db65ead706526822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTransform: {fileID: 8703531819924029154}
   grabSocket: {fileID: 1430354754}
-  grabDistance: 4
-  breakForce: 5000
-  breakTorque: 5000
+  grabDistance: 3
+  breakForce: 50000
+  breakTorque: 50000
+--- !u!114 &8703750356625852055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8703531819276448512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4619e715d67031c40ba507c9fe2f7517, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 8703531819924029154}
+--- !u!114 &720566351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8703531819276448512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847a8c348a58bcc4b9cce0c7c9e73c99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightMaterial: {fileID: 2100000, guid: 56b9f79f06afbb544b63a6f6badec22c, type: 2}
 --- !u!1 &8703531819924029155
 GameObject:
   m_ObjectHideFlags: 0

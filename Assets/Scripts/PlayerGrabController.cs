@@ -7,6 +7,7 @@ public class PlayerGrabController : MonoBehaviour
 	public const int gameplayLayerMask = 1 << 9;
 	public const int rackSocketsMask = 1 << 10;
 
+	public float grabDistance = 3.0f;
 	public Transform cameraTransform;
 
 	private GrabController cachedGrabController;
@@ -23,7 +24,7 @@ public class PlayerGrabController : MonoBehaviour
 
 	private void LateUpdate()
 	{
-		Debug.DrawRay(cameraTransform.position, cameraTransform.forward * cachedGrabController.grabDistance);
+		Debug.DrawRay(cameraTransform.position, cameraTransform.forward * grabDistance);
 
 		RackSocket = null;
 		GrabCollider = null;
@@ -33,10 +34,10 @@ public class PlayerGrabController : MonoBehaviour
 		{
 			GameObject grabbedObject = cachedGrabController.GrabbedBody.gameObject;
 
-			Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, Mathf.Infinity, rackSocketsMask);
+			Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, grabDistance, rackSocketsMask);
 			Transform newRackSocket = (hit.collider) ? hit.collider.transform : null;
 
-			if (RackSocket != newRackSocket)
+			if (newRackSocket == null || RackSocket != newRackSocket)
 			{
 				RackSocket = newRackSocket;
 				if (RackSocket)
@@ -47,7 +48,7 @@ public class PlayerGrabController : MonoBehaviour
 		}
 		else
 		{
-			Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, cachedGrabController.grabDistance, gameplayLayerMask);
+			Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, grabDistance, gameplayLayerMask);
 			GrabCollider = hit.collider;
 		}
 
@@ -56,8 +57,18 @@ public class PlayerGrabController : MonoBehaviour
 			cachedRackSocketHighlighter.SetHighlightItem(null, Vector3.zero, Quaternion.identity);
 			if (cachedGrabController.GrabbedBody)
 				cachedGrabController.Release(RackSocket);
-			else
-				cachedGrabController.Grab(hit.rigidbody);
+			else if (hit.rigidbody)
+			{
+				StoreCrateController controller = hit.rigidbody.gameObject.GetComponent<StoreCrateController>();
+				if (controller)
+				{
+					GameObject item = controller.FetchItem();
+					if (item)
+						cachedGrabController.Grab(item.GetComponent<Rigidbody>());
+				}
+				else
+					cachedGrabController.Grab(hit.rigidbody);
+			}
 		}
 	}
 }
