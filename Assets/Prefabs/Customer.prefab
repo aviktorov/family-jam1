@@ -316,9 +316,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabSocket: {fileID: 7170351820081411922}
-  grabDistance: 1
-  breakForce: 5000
-  breakTorque: 5000
+  grabDistance: 3
+  breakForce: 50000
+  breakTorque: 50000
 --- !u!1 &7170351819930534495
 GameObject:
   m_ObjectHideFlags: 0

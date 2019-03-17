@@ -5,7 +5,6 @@ using UnityEngine;
 public class GrabController : MonoBehaviour
 {
 	public Transform grabSocket;
-	public float grabDistance = 1.0f;
 
 	public float breakForce = 5000.0f;
 	public float breakTorque = 5000.0f;
@@ -32,7 +31,6 @@ public class GrabController : MonoBehaviour
 		}
 
 		body.transform.position = grabSocket.position;
-
 		grabJoint.connectedBody = body;
 
 		return grabJoint;

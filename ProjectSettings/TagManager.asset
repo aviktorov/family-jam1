@@ -12,6 +12,7 @@ TagManager:
   - CashboxLine
   - Exit
   - Entrance
+  - StoreCrate
   layers:
   - Default
   - TransparentFX
