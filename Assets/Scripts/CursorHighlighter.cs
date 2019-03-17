@@ -23,9 +23,9 @@ public class CursorHighlighter : MonoBehaviour
 	private void Update()
 	{
 		Color targetColor = cachedColor;
-		Collider collider = (grabController) ? grabController.GrabCollider : null;
+		Rigidbody body = (grabController) ? grabController.GrabbedBody : null;
 
-		if (collider && collider.tag == "Item")
+		if (body && body.tag == "Item")
 			targetColor = highlightColor;
 
 		cachedImage.color = Color.Lerp(cachedImage.color, targetColor, smoothness * Time.deltaTime);
