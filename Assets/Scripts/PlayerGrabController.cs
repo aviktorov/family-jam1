@@ -13,7 +13,12 @@ public class PlayerGrabController : MonoBehaviour
 	private GrabController cachedGrabController;
 	private RackSocketHighlighter cachedRackSocketHighlighter;
 
-	public Collider GrabCollider { get; private set; }
+	public Collider GrabbedCollider { get; private set; }
+	public Rigidbody GrabbedBody
+	{
+		get { return (GrabbedCollider) ? GrabbedCollider.attachedRigidbody : null; }
+	}
+
 	public Transform RackSocket { get; private set; }
 
 	private void Awake()
@@ -27,7 +32,7 @@ public class PlayerGrabController : MonoBehaviour
 		Debug.DrawRay(cameraTransform.position, cameraTransform.forward * grabDistance);
 
 		RackSocket = null;
-		GrabCollider = null;
+		GrabbedCollider = null;
 
 		RaycastHit hit;
 		if (cachedGrabController.GrabbedBody)
@@ -49,7 +54,7 @@ public class PlayerGrabController : MonoBehaviour
 		else
 		{
 			Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, grabDistance, gameplayLayerMask);
-			GrabCollider = hit.collider;
+			GrabbedCollider = hit.collider;
 		}
 
 		if (Input.GetButtonDown("Fire1"))

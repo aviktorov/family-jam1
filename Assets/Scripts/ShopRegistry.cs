@@ -10,19 +10,19 @@ public class ShopRegistry : MonoSingleton<ShopRegistry>
 	private void TryAdd(Collider collider)
 	{
 		if (collider.tag == "Item")
-			items.Add(collider.gameObject);
+			items.Add(collider.attachedRigidbody.gameObject);
 
 		if (collider.tag == "Rack")
-			racks.Add(collider.gameObject);
+			racks.Add(collider.attachedRigidbody.gameObject);
 	}
 
 	private void TryRemove(Collider collider)
 	{
 		if (collider.tag == "Item")
-			items.Remove(collider.gameObject);
+			items.Remove(collider.attachedRigidbody.gameObject);
 
 		if (collider.tag == "Rack")
-			racks.Remove(collider.gameObject);
+			racks.Remove(collider.attachedRigidbody.gameObject);
 	}
 
 	private void Start()
