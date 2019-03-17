@@ -11,7 +11,22 @@ public static class GameObjectExtensions
 		foreach (T component in components)
 			GameObject.Destroy(component);
 	}
-	
+
+	public static void SetMaterial(this GameObject item, Material material)
+	{
+		MeshRenderer[] renderers = item.GetComponentsInChildren<MeshRenderer>();
+
+		for (int i = 0; i < renderers.Length; i++)
+		{
+			MeshRenderer renderer = renderers[i];
+			renderer.receiveShadows = false;
+			renderer.shadowCastingMode = ShadowCastingMode.Off;
+			renderer.sharedMaterial = material;
+			for (int j = 0; j < renderer.sharedMaterials.Length; j++)
+				renderer.sharedMaterials[j] = material;
+		}
+	}
+
 	public static GameObject MakeProxy(this GameObject item, Material material, Vector3 position, Quaternion orientation)
 	{
 		GameObject proxy = GameObject.Instantiate(item, position, orientation);

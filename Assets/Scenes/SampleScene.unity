@@ -2206,7 +2206,7 @@ Transform:
   - {fileID: 1830951322}
   - {fileID: 1647157815}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4929890603239960872
 Transform:
@@ -2286,7 +2286,7 @@ PrefabInstance:
     - target: {fileID: 8815120286883429073, guid: 3ae7312416d46f54b8e2b3604583964f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8815120286883429073, guid: 3ae7312416d46f54b8e2b3604583964f,
         type: 3}
@@ -2376,6 +2376,14 @@ PrefabInstance:
         type: 3}
       propertyPath: near clip plane
       value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 720566350, guid: 4e434a946bf465d4a873f735289b1064, type: 3}
+      propertyPath: breakForce
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 720566350, guid: 4e434a946bf465d4a873f735289b1064, type: 3}
+      propertyPath: breakTorque
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 1430354754, guid: 4e434a946bf465d4a873f735289b1064, type: 3}
       propertyPath: m_LocalPosition.y
