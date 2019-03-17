@@ -9,25 +9,68 @@ public class ShopRegistry : MonoSingleton<ShopRegistry>
 	public int disappointedCustomers = 0;
 	public float timeLeft = 601; // 10 minutes
 
-	public HashSet<GameObject> items = new HashSet<GameObject>();
-	public HashSet<GameObject> racks = new HashSet<GameObject>();
+	public GameObject[] Items
+	{
+		get { return cachedItems; }
+	}
+
+	public GameObject[] Racks
+	{
+		get { return cachedRacks; }
+	}
+
+	private GameObject[] cachedItems = null;
+	private GameObject[] cachedRacks = null;
+
+	private HashSet<GameObject> items = new HashSet<GameObject>();
+	private HashSet<GameObject> racks = new HashSet<GameObject>();
 
 	private void TryAdd(Collider collider)
 	{
 		if (collider.tag == "Item")
+		{
 			items.Add(collider.attachedRigidbody.gameObject);
 
+			cachedItems = new GameObject[items.Count];
+			items.CopyTo(cachedItems);
+		}
+
 		if (collider.tag == "Rack")
+		{
 			racks.Add(collider.attachedRigidbody.gameObject);
+
+			cachedRacks = new GameObject[racks.Count];
+			racks.CopyTo(cachedRacks);
+		}
 	}
 
 	private void TryRemove(Collider collider)
 	{
 		if (collider.tag == "Item")
+		{
 			items.Remove(collider.attachedRigidbody.gameObject);
 
+			if (items.Count > 0)
+			{
+				cachedItems = new GameObject[items.Count];
+				items.CopyTo(cachedItems);
+			}
+			else
+				cachedItems = null;
+		}
+
 		if (collider.tag == "Rack")
+		{
 			racks.Remove(collider.attachedRigidbody.gameObject);
+
+			if (racks.Count > 0)
+			{
+				cachedRacks = new GameObject[racks.Count];
+				racks.CopyTo(cachedRacks);
+			}
+			else
+				cachedRacks = null;
+		}
 	}
 
 	private void Start()

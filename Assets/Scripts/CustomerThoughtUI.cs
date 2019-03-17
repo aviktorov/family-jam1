@@ -33,6 +33,12 @@ public class CustomerThoughtUI : MonoBehaviour
 		if (!cachedController)
 			return;
 
+		if (!cachedController.Happy)
+		{
+			cachedRenderer.sprite = disappointingSprite;
+			return;
+		}
+
 		switch (cachedController.State)
 		{
 			case CustomerState.Entered: cachedRenderer.sprite = enteredSprite; break;

@@ -35,6 +35,11 @@ public class CustomerController : MonoBehaviour
 	private bool boughtItem = false;
 	private bool happy = true;
 
+	public bool Happy
+	{
+		get { return happy; }
+	}
+
 	public CustomerState State
 	{
 		get { return currentState; }
@@ -59,24 +64,22 @@ public class CustomerController : MonoBehaviour
 
 		// TODO: pick closest?
 		wantedReachTarget = items[UnityEngine.Random.Range(0, items.Length)];
-
-		cachedAgent.SetDestination(wantedReachTarget.transform.position);
+		if (wantedReachTarget)
+			cachedAgent.SetDestination(wantedReachTarget.transform.position);
 	}
 
-	private void SetRandomRegistryTarget(HashSet<GameObject> targets)
+	private void SetRandomRegistryTarget(GameObject[] targets)
 	{
-		if (targets == null || targets.Count == 0)
+		if (targets == null || targets.Length == 0)
 		{
 			wantedReachTarget = null;
 			return;
 		}
 
 		// TODO: remove later
-		GameObject[] targetsArray = new GameObject[targets.Count];
-		targets.CopyTo(targetsArray);
-
-		wantedReachTarget = targetsArray[UnityEngine.Random.Range(0, targetsArray.Length)];
-		cachedAgent.SetDestination(wantedReachTarget.transform.position);
+		wantedReachTarget = targets[UnityEngine.Random.Range(0, targets.Length)];
+		if (wantedReachTarget)
+			cachedAgent.SetDestination(wantedReachTarget.transform.position);
 	}
 
 	private bool HandlePathProgress()
@@ -119,7 +122,7 @@ public class CustomerController : MonoBehaviour
 
 	private void ProcessLookingForRackState()
 	{
-		SetRandomRegistryTarget(ShopRegistry.instance.racks);
+		SetRandomRegistryTarget(ShopRegistry.instance.Racks);
 		currentState = CustomerState.EnRouteToRack;
 	}
 
@@ -133,7 +136,7 @@ public class CustomerController : MonoBehaviour
 
 	private void ProcessLookingForItemState()
 	{
-		SetRandomRegistryTarget(ShopRegistry.instance.items);
+		SetRandomRegistryTarget(ShopRegistry.instance.Items);
 		wantedItem = wantedReachTarget;
 
 		currentState = (wantedReachTarget) ? CustomerState.EnRouteToItem : CustomerState.Disappointing;
