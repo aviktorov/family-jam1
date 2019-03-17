@@ -92,29 +92,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e939ef828c67094f853a295e189d964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enteredSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659, type: 3}
-  lookingForRackSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
+  enteredSprite: {fileID: 21300000, guid: eab6f9b57f1507445848c08bdd7fb947, type: 3}
+  lookingForRackSprite: {fileID: 0}
+  enRouteToRackSprite: {fileID: 21300000, guid: 35e7da9d4ba3b10479b5db325f73027f,
     type: 3}
-  enRouteToRackSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
+  lookingForItemSprite: {fileID: 0}
+  enRouteToItemSprite: {fileID: 21300000, guid: f2e0021c8ed3c324090b14cabba379f6,
     type: 3}
-  lookingForItemSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
+  lookingForCashboxLineSprite: {fileID: 0}
+  enRouteToCashboxLineSprite: {fileID: 21300000, guid: d776e5eb97af3684795f9858f5c2b4f6,
     type: 3}
-  enRouteToItemSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
+  inCashboxLineSprite: {fileID: 0}
+  lookingForExitSprite: {fileID: 0}
+  enRouteToExitSprite: {fileID: 21300000, guid: b2945a4582a2fd04b884d3e41ffe3d88,
     type: 3}
-  lookingForCashboxLineSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
+  buyingSprite: {fileID: 0}
+  disappointingSprite: {fileID: 21300000, guid: 7aed1a2bf042f874eb7c2cd71a5ccbf3,
     type: 3}
-  enRouteToCashboxLineSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
-    type: 3}
-  inCashboxLineSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
-    type: 3}
-  lookingForExitSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
-    type: 3}
-  enRouteToExitSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
-    type: 3}
-  buyingSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659, type: 3}
-  disappointingSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
-    type: 3}
-  leavingSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659, type: 3}
+  leavingSprite: {fileID: 0}
   cachedController: {fileID: 7170351818912060349}
 --- !u!1 &7170351818227366474
 GameObject:

@@ -2958,8 +2958,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerPrefab: {fileID: 7170351818912060344, guid: a1fa27e0405b45d498e85c5d6489cd2d,
     type: 3}
-  spawnIntervalMin: 2
-  spawnIntervalMax: 5
+  spawnIntervalMin: 1
+  spawnIntervalMax: 3
 --- !u!1 &1651670647
 GameObject:
   m_ObjectHideFlags: 0
@@ -4091,11 +4091,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoreCrateBoxH
       objectReference: {fileID: 0}
-    - target: {fileID: 5158627650946026457, guid: 3a480e3f3f6320e46b4c4da2629a760b,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 5158627650946026402, guid: 3a480e3f3f6320e46b4c4da2629a760b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4150,16 +4145,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5158627649896120275, guid: 3a480e3f3f6320e46b4c4da2629a760b,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5158627650490693783, guid: 3a480e3f3f6320e46b4c4da2629a760b,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5158627650946026462, guid: 3a480e3f3f6320e46b4c4da2629a760b,
         type: 3}
