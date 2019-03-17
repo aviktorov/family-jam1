@@ -22,11 +22,8 @@ public class CursorHighlighter : MonoBehaviour
 
 	private void Update()
 	{
-		Color targetColor = cachedColor;
 		Rigidbody body = (grabController) ? grabController.GrabbedBody : null;
-
-		if (body && body.tag == "Item")
-			targetColor = highlightColor;
+		Color targetColor = (body) ? highlightColor : cachedColor;
 
 		cachedImage.color = Color.Lerp(cachedImage.color, targetColor, smoothness * Time.deltaTime);
 	}

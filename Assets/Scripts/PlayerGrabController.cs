@@ -6,6 +6,7 @@ public class PlayerGrabController : MonoBehaviour
 {
 	public const int gameplayLayerMask = 1 << 9;
 	public const int rackSocketsMask = 1 << 10;
+	public const int crateLayerMask = 1 << 12;
 
 	public float grabDistance = 3.0f;
 	public Transform cameraTransform;
@@ -53,7 +54,7 @@ public class PlayerGrabController : MonoBehaviour
 		}
 		else
 		{
-			Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, grabDistance, gameplayLayerMask);
+			Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, grabDistance, gameplayLayerMask | crateLayerMask);
 			GrabbedCollider = hit.collider;
 		}
 
