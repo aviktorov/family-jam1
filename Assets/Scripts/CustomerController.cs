@@ -35,6 +35,11 @@ public class CustomerController : MonoBehaviour
 	private bool boughtItem = false;
 	private bool happy = true;
 
+	public CustomerState State
+	{
+		get { return currentState; }
+	}
+
 	private void Awake()
 	{
 		cachedGrabController = GetComponent<GrabController>();

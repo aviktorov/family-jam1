@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1291223232}
   - component: {fileID: 1291223233}
+  - component: {fileID: 8628538761499559245}
   m_Layer: 0
   m_Name: ThoughtIcon
   m_TagString: Untagged
@@ -79,6 +80,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8628538761499559245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291223231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e939ef828c67094f853a295e189d964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enteredSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659, type: 3}
+  lookingForRackSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
+    type: 3}
+  enRouteToRackSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
+    type: 3}
+  lookingForItemSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
+    type: 3}
+  enRouteToItemSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
+    type: 3}
+  lookingForCashboxLineSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
+    type: 3}
+  enRouteToCashboxLineSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
+    type: 3}
+  inCashboxLineSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
+    type: 3}
+  lookingForExitSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
+    type: 3}
+  enRouteToExitSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
+    type: 3}
+  buyingSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659, type: 3}
+  disappointingSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659,
+    type: 3}
+  leavingSprite: {fileID: 21300000, guid: cd9453216d0e46a43b5eac6c479e0659, type: 3}
+  cachedController: {fileID: 7170351818912060349}
 --- !u!1 &7170351818227366474
 GameObject:
   m_ObjectHideFlags: 0
